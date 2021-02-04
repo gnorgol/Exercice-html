@@ -1,0 +1,29 @@
+<script>
+function afficher(){
+var saisie =document.getElementById("categorie").value;
+
+if (saisie == "France") {
+	document.getElementById("texte").value = "Paris" ;
+
+}
+if (saisie == "Japon") {
+
+	document.getElementById("texte").value="Tokyo" ;
+}
+if (saisie == "Allemagne") {
+
+	document.getElementById("texte").value="Berlin" ;
+}
+
+}
+</script>
+
+
+<form>
+<select id="categorie" multiple="oui" class="form-control" onclick="afficher()">
+<option value="France">France</option>
+<option value="Japon">Japon</option>
+<option value="Allemagne">Allemagne</option>
+<input type="text" id="texte"  size="30" value="">
+</form>
+

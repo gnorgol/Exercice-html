@@ -1,20 +1,26 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+
+
 <h3>Moteur de recherche</h3>
 
-<form action="#">
+<form action="http://univcergy.phpnet.org/CCI/form.php">
 
 <label>Mots clefs :</label>
-<input type="text" name="motclef"><br>
+<input type="text" name="motclef" class="form-control"><br>
 
 <label>Catégorie:</label><br>
-<select name="categorie" multiple="oui">
+<select name="categorie" multiple="oui" class="form-control">
 <option value="Jouet">Jouet</option>
 <option value="Location">Location</option>
 <option value="Voitures">Voitures</option>
 </select><br>
 
 <label>Département:</label>
-<select name="dept"">
+<select name="dept"class="form-control">
 <option value="Bretagne">Bretagne</option>
 </select><br>
-<input type="submit" value="Chercher">
+<input type="submit" value="Chercher" class="btn btn-success btn-lg">
 </form>

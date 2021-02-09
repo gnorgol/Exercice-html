@@ -1,0 +1,103 @@
+<script type="text/javascript">
+
+function verifMail(){
+a=document.getElementById("mail").value;
+testm = false ;
+
+for (var j=1 ; j<(a.length) ; j++) {
+
+
+  if (a.charAt(j)=='@') {
+   if (j<(a.length-4)){
+    for (var k=j ; k<(a.length-2) ; k++) {
+     if (a.charAt(k)=='.') testm = true;
+    }
+   }
+  }
+ }
+
+if (testm==false) {alert('Votre adresse e-mail est incorrecte.');}
+else {alert('Votre adresse e-mail semble correcte.');}
+return testm ;
+}
+</script>
+
+<form name="formulaire" action="test">
+Entrez une adresse e-mail  
+<input type="text" name="email" id="mail" >  
+<input type="button" value="Vérifier" onClick="verifMail()"><br>
+
+<script type="text/javascript">
+
+function veriftel(){
+a=document.getElementById("tel").value;
+testm = false ;
+
+if(a.length == '10')
+{
+	if(a.charAt(0) == '0')
+	{
+		testm = true;
+	}
+}
+
+if (testm==false) {alert('Votre numéro de téléphone est incorrect.');}
+else {alert('Votre numéro de téléphone semble correct.');}
+return testm ;
+}
+</script>
+
+<form name="formulaire" action="test">
+Entrez un numéro de telephone 
+<input type="number" name="tel" id="tel" >  
+<input type="button" value="Vérifier" onClick="veriftel()">
+</form><br>
+
+<script type="text/javascript">
+
+function verifmdp(){
+a=document.getElementById("login").value;
+b=document.getElementById("mdp").value;
+
+var motdepasse = ["tgbz","rtsh","Pagaka","dzerg","kaboum78"];
+var login = ["TheKevinDu95","Conakry","grezhyrsdf","Pierre92"];
+testm = false ;
+testl=false;
+testa=false;
+
+for (var i=0 ; i<(login.length) ; i++) 
+{
+	if(a == login[i])
+	{
+		testl=true;
+	}
+}
+for (var j=0 ; j<(motdepasse.length) ; j++) 
+{
+	if(b == motdepasse[j])
+	{
+		testm=true;
+	}
+}
+
+if(testl == true )
+	{
+		if(testm == true )
+		{
+			testa=true;
+		}
+	}
+
+if (testa==false) {alert('Votre mot de passe est incorrect.');}
+else {alert('Votre mot de passe semble correct.');}
+return testm ;
+}
+</script>
+
+<form name="formulaire" action="test">
+entrez votre login : <input type="text" name="login" id="login" > 
+</br>
+entrez votre mot de passe : <input type="text" name="motdepasse" id="mdp" > 
+</br>
+<input type="button" value="Vérifier" onClick="verifmdp()">
+</form><br>
